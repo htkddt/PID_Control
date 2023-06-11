@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"firmware\startup_stm32f103xb.o"
+"firmware\main.o"
+"firmware\gpio.o"
+"firmware\tim.o"
+"firmware\usart.o"
+"firmware\stm32f1xx_it.o"
+"firmware\stm32f1xx_hal_msp.o"
+"firmware\stm32f1xx_hal_gpio_ex.o"
+"firmware\stm32f1xx_hal_tim.o"
+"firmware\stm32f1xx_hal_tim_ex.o"
+"firmware\stm32f1xx_hal.o"
+"firmware\stm32f1xx_hal_rcc.o"
+"firmware\stm32f1xx_hal_rcc_ex.o"
+"firmware\stm32f1xx_hal_gpio.o"
+"firmware\stm32f1xx_hal_dma.o"
+"firmware\stm32f1xx_hal_cortex.o"
+"firmware\stm32f1xx_hal_pwr.o"
+"firmware\stm32f1xx_hal_flash.o"
+"firmware\stm32f1xx_hal_flash_ex.o"
+"firmware\stm32f1xx_hal_exti.o"
+"firmware\stm32f1xx_hal_uart.o"
+"firmware\system_stm32f1xx.o"
+--strict --scatter "FIRMWARE\FIRMWARE.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "FIRMWARE.map" -o FIRMWARE\FIRMWARE.axf
